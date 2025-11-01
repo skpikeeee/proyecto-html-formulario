@@ -1,5 +1,5 @@
 body{
-    background-color: #222;
+    background: radial-gradient(#48c,#222);
     color: #eee;
     font-family: sans-serif;
     margin: 0;
@@ -17,22 +17,28 @@ form{
     margin: auto;
     margin-top: 100px;
     box-sizing: border-box;
-    box-shadow: 0 0 40px;
+    box-shadow: 0 0 20px #222;
     padding: 15px 9px;
     border-radius: 20px;
 }
 
 input,select,datalist,textarea{
     width: 100%;
-    padding: 3px 5px;
+    padding: 6px 5px;
     box-sizing: border-box;
-    border-radius: 5px;
+    border-radius: 7px;
     border: none;
-    background-color: #222;
-    border: 2px solid #666;
+    background: linear-gradient(to top,#48c,
+    #222);
+    border: 2px solid #eee3;
     color: #eee;
 }
 
 label{
     line-height: 1.70;
+}
+
+textarea{
+    resize: none;
+    width: 100%;
 }
