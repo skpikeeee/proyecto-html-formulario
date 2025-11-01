@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="RicardoFlores">
+    <meta name="keywoards" content="formulario">
+    <link rel="stylesheet" href="style.css">
+    <title>Formulario De Contacto</title>
+</head>
+<body>
+    <form>
+        <div class="h1">
+            <h1>Formulario De Contacto</h1>
+        </div>
+        <div class="form_input">
+            <label for="nombre">Nombre Completo</label>
+            <input type="text" id="nombre" placeholder="ej: Pablo weko" required>
+        </div>
+        <div class="form_input">
+            <label for="Email">Email</label>
+            <input type="email" id="Email" placeholder="ejemplo@gmail.com">
+        </div>
+        <div class="form_input">
+            <label for="Tipo">Tipo De Usuario</label>
+            <select name="type-of-user" id="Tipo">
+                <option value="user1">Ricardo Flores</option>
+                <option value="user2">Soy dalto</option>
+            </select>
+        </div>
+        <div class="form_input">
+            <label>Referentes</label>
+            <input list="referentes">
+            <datalist id="referentes">
+                <option value="Ricardo">Programador y front end</option>
+                <option value="Soy dalto">Vos sabes</option>
+            </datalist>
+        </div>
+        <div class="form_input">
+            <label for="textarea">Deje su mensaje</label>
+            <textarea rows="6" maxlength="200" id="textarea" placeholder="deje su mensaje"></textarea>
+        </div>
+    </form>
+    
+</body>
+</html>
