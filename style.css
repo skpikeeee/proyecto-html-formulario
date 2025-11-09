@@ -52,3 +52,23 @@ textarea{
 .emailll:valid{
     color: #eee;
 }
+
+.terminos{
+    text-decoration: none;
+    color: #48c;
+}
+
+.terminos:link{
+    color: #48c;
+    font-family: sans-serif;
+}
+
+.terminos:visited{
+    color: #105f0c;
+    font-family: sans-serif;
+}
+
+input::placeholder{
+    color: #eee;
+    font-family: sans-serif;
+}
