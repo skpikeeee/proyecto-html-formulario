@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Términos y Condiciones | [[Nombre del Sitio/Aplicación]]</title>
+  <meta name="description" content="Términos y Condiciones de uso de [[Nombre del Sitio/Aplicación]]." />
+  <style>
+    :root{
+      --bg:#0b1020;
+      --card:#111831;
+      --muted:#8ea0c9;
+      --text:#e8ecff;
+      --brand:#5aa0ff;
+      --brand-2:#72ffd6;
+      --border:#24335c;
+      --accent:#1a2447;
+      --radius:18px;
+      --shadow: 0 10px 30px rgba(7,12,28,.35);
+      --font: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji","Segoe UI Emoji";
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:var(--font);
+      color:var(--text);
+      background:
+        radial-gradient(1200px 600px at 80% -10%, rgba(114,255,214,.18), transparent 60%),
+        radial-gradient(1000px 600px at -10% 10%, rgba(90,160,255,.15), transparent 55%),
+        linear-gradient(180deg, #0a0f1d 0%, #0b1020 100%);
+      background-attachment: fixed;
+      line-height:1.6;
+      -webkit-font-smoothing:antialiased;
+    }
+    .wrapper{
+      max-width:1100px;
+      margin-inline:auto;
+      padding:28px 18px 64px;
+      display:grid;
+      grid-template-columns: 280px 1fr;
+      gap:28px;
+    }
+    header.site{
+      grid-column:1 / -1;
+      background: linear-gradient(135deg,var(--card),var(--accent));
+      border:1px solid var(--border);
+      border-radius: calc(var(--radius) + 6px);
+      box-shadow: var(--shadow);
+      padding:28px;
+      position:relative;
+      overflow:hidden;
+    }
+    header.site:after{
+      content:"";
+      position:absolute; inset:-40% -20% auto auto;
+      width:420px; height:420px; border-radius:50%;
+      background: radial-gradient(circle at 30% 30%, rgba(90,160,255,.35), transparent 60%);
+      filter: blur(20px);
+      pointer-events:none;
+    }
+    .title{
+      display:flex; align-items:center; gap:14px; flex-wrap:wrap;
+    }
+    .title h1{
+      margin:0; font-weight:800; letter-spacing:.2px;
+      font-size:clamp(22px, 3.2vw, 36px);
+      background: linear-gradient(92deg, var(--text), #cfe2ff 40%, #b2c7ff);
+      -webkit-background-clip:text; background-clip:text; color:transparent;
+      text-shadow: 0 1px 0 rgba(0,0,0,.2);
+    }
+    .badge{
+      padding:6px 10px; border-radius:999px;
+      border:1px solid var(--border); background:rgba(255,255,255,.04);
+      font-size:12px; color:var(--muted);
+    }
+    .meta{
+      margin-top:6px; color:var(--muted); font-size:14px;
+    }
+    nav.toc{
+      position:sticky; top:16px;
+      height:fit-content;
+      background: linear-gradient(180deg, var(--card), #0f1630);
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      box-shadow: var(--shadow);
+      padding:18px;
+    }
+    nav.toc h2{
+      margin:0 0 10px; font-size:14px; color:#bcd0ff; letter-spacing:.3px; text-transform:uppercase;
+    }
+    nav.toc a{
+      display:block; text-decoration:none; color:var(--muted);
+      padding:8px 10px; border-radius:10px; transition:.2s ease background, .2s ease color;
+      border:1px solid transparent;
+      font-size:14px;
+    }
+    nav.toc a:hover{ background:rgba(255,255,255,.04); color:#dbe6ff; border-color:var(--border); }
+    main.doc{
+      display:grid; gap:18px;
+    }
+    section.card{
+      background: linear-gradient(180deg, var(--card), #0e152d 70%);
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      box-shadow: var(--shadow);
+      padding:22px 22px;
+    }
+    section.card h2{
+      margin-top:0; margin-bottom:8px;
+      font-size:clamp(18px, 2.3vw, 24px);
+    }
+    p, li{ color:#dde6ff; }
+    code.inline{
+      background:rgba(255,255,255,.06);
+      border:1px solid var(--border);
+      padding:.2em .45em; border-radius:7px; font-family:ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; font-size:.95em;
+      color:#eaf2ff;
+    }
+    details{
+      margin-top:10px; border:1px dashed var(--border); border-radius:14px; overflow:hidden;
+      background: rgba(255,255,255,.02);
+    }
+    details[open]{ background: rgba(255,255,255,.04); }
+    summary{
+      cursor:pointer; padding:14px 16px; list-style:none; font-weight:600;
+      color:#cfe2ff; position:relative;
+    }
+    summary::-webkit-details-marker{ display:none; }
+    details .content{ padding:0 16px 14px; }
+    .pill{
+      display:inline-flex; gap:8px; align-items:center;
+      background: linear-gradient(90deg, rgba(90,160,255,.18), rgba(114,255,214,.18));
+      border:1px solid var(--border); color:#d9e8ff;
+      padding:6px 10px; border-radius:999px; font-size:12px;
+    }
+    ul.clean{ margin:0; padding-left:18px; }
+    a.link{ color:#cfe2ff; text-underline-offset:3px; }
+    footer{
+      grid-column:1 / -1; opacity:.85; color:var(--muted); margin-top:8px; font-size:13px;
+    }
+    .callout{
+      border:1px solid var(--border);
+      background:linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));
+      padding:14px 16px; border-radius:14px; color:#d2defc;
+    }
+    /* Responsive */
+    @media (max-width: 900px){
+      .wrapper{ grid-template-columns: 1fr; }
+      nav.toc{ order:2; }
+      main.doc{ order:1; }
+    }
+    /* Impresión */
+    @media print {
+      body{ background:#fff; color:#000; }
+      header.site, nav.toc, .pill, .badge{ box-shadow:none; background:#fff; border:1px solid #ddd; color:#000; }
+      a.link{ color:#000; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <header class="site" role="banner">
+      <div class="title">
+        <h1>Términos y Condiciones</h1>
+        <span class="badge">[[Nombre del Sitio/Aplicación]]</span>
+      </div>
+      <div class="meta">
+        Última actualización: <strong>8 de noviembre de 2025</strong> · Vigente en <strong>Chile</strong>
+      </div>
+      <div class="callout" style="margin-top:14px">
+        Este documento regula el uso de [[Nombre del Sitio/Aplicación]] operado por [[Razón social o titular]], RUT [[XXXXXXXX-X]]. 
+        Al acceder o utilizar el servicio, aceptas íntegramente estos términos.
+      </div>
+    </header>
+
+    <nav class="toc" aria-label="Índice">
+      <h2>Contenido</h2>
+      <a href="#aceptacion">1. Aceptación</a>
+      <a href="#definiciones">2. Definiciones</a>
+      <a href="#elegibilidad">3. Elegibilidad / Edad mínima</a>
+      <a href="#cuentas">4. Cuentas y seguridad</a>
+      <a href="#uso-permitido">5. Uso permitido y prohibiciones</a>
+      <a href="#pagos">6. Precios, pagos y reembolsos</a>
+      <a href="#propiedad">7. Propiedad intelectual</a>
+      <a href="#contenido-usuario">8. Contenido del usuario</a>
+      <a href="#privacidad">9. Privacidad y datos</a>
+      <a href="#cookies">10. Cookies y tracking</a>
+      <a href="#terceros">11. Enlaces y servicios de terceros</a>
+      <a href="#garantias">12. Exención de garantías</a>
+      <a href="#responsabilidad">13. Limitación de responsabilidad</a>
+      <a href="#indemnizacion">14. Indemnización</a>
+      <a href="#terminacion">15. Terminación</a>
+      <a href="#cambios">16. Cambios a los términos</a>
+      <a href="#ley">17. Ley aplicable y jurisdicción</a>
+      <a href="#contacto">18. Contacto</a>
+    </nav>
+
+    <main class="doc" role="main">
+      <section id="aceptacion" class="card">
+        <h2>1. Aceptación de los Términos</h2>
+        <p>Al acceder o utilizar [[Nombre del Sitio/Aplicación]] (el <em>“Servicio”</em>) declaras haber leído, comprendido y aceptado estos Términos y Condiciones (<em>“Términos”</em>), así como nuestra <a class="link" href="[[URL de la Política de Privacidad]]">Política de Privacidad</a>.</p>
+        <details>
+          <summary>Resumen rápido (no sustituye el texto legal)</summary>
+          <div class="content">
+            <ul class="clean">
+              <li>Usa el Servicio de forma lícita y respetuosa.</li>
+              <li>Protege tus credenciales y tu cuenta.</li>
+              <li>Respetamos tus datos según la Política de Privacidad.</li>
+              <li>Podemos actualizar estos Términos; te avisaremos cuando aplique.</li>
+            </ul>
+          </div>
+        </details>
+      </section>
+
+      <section id="definiciones" class="card">
+        <h2>2. Definiciones</h2>
+        <p><strong>“Usuario”</strong>: persona natural o jurídica que accede al Servicio. <strong>“Contenido”</strong>: textos, imágenes, código, comentarios u otros materiales subidos o generados.</p>
+      </section>
+
+      <section id="elegibilidad" class="card">
+        <h2>3. Elegibilidad / Edad mínima</h2>
+        <p>Debes tener al menos <strong>18 años</strong> o contar con la autorización válida de tu representante legal para usar el Servicio, según la normativa vigente en la República de Chile.</p>
+      </section>
+
+      <section id="cuentas" class="card">
+        <h2>4. Cuentas y seguridad</h2>
+        <ul class="clean">
+          <li>Eres responsable de la veracidad de los datos de registro.</li>
+          <li>Debes mantener la confidencialidad de tus credenciales y notificar de inmediato un uso no autorizado.</li>
+          <li>Podemos suspender o cancelar cuentas que incumplan estos Términos.</li>
+        </ul>
+      </section>
+
+      <section id="uso-permitido" class="card">
+        <h2>5. Uso permitido y conductas prohibidas</h2>
+        <p>Te comprometes a utilizar el Servicio conforme a la ley, la moral, el orden público y estos Términos.</p>
+        <details>
+          <summary>Ejemplos de conductas prohibidas</summary>
+          <div class="content">
+            <ul class="clean">
+              <li>Infringir derechos de autor o marcas.</li>
+              <li>Intentar acceder sin autorización a sistemas o datos.</li>
+              <li>Subir malware, spam o contenidos ilícitos.</li>
+              <li>Usar el Servicio para actividades fraudulentas o engañosas.</li>
+            </ul>
+          </div>
+        </details>
+      </section>
+
+      <section id="pagos" class="card">
+        <h2>6. Precios, pagos y reembolsos</h2>
+        <p>Si el Servicio incluye planes o compras:</p>
+        <ul class="clean">
+          <li>Los precios se muestran en [[CLP u otra moneda]] e incluyen/ no incluyen impuestos según se indique.</li>
+          <li>Los pagos se procesan mediante [[Proveedor de pago]] siguiendo sus condiciones.</li>
+          <li>Política de reembolsos: [[Describe tu política de reembolsos, plazos y requisitos]].</li>
+        </ul>
+      </section>
+
+      <section id="propiedad" class="card">
+        <h2>7. Propiedad intelectual</h2>
+        <p>El Servicio, su código, diseño, marcas y logotipos son propiedad de [[Titular]] o de sus licenciantes. No se concede licencia alguna salvo lo expresamente indicado.</p>
+      </section>
+
+      <section id="contenido-usuario" class="card">
+        <h2>8. Contenido del usuario</h2>
+        <p>Al subir Contenido, declaras que posees los derechos necesarios y otorgas a [[Titular]] una licencia <span class="pill">no exclusiva · mundial · revocable</span> para alojar y mostrar dicho Contenido con el fin de operar el Servicio.</p>
+      </section>
+
+      <section id="privacidad" class="card">
+        <h2>9. Privacidad y protección de datos</h2>
+        <p>Tratamos los datos personales conforme a nuestra <a class="link" href="[[URL de la Política de Privacidad]]">Política de Privacidad</a>. Puedes ejercer tus derechos de acceso, rectificación, cancelación y oposición enviando un correo a <a class="link" href="mailto:[[correo@dominio.cl]]">[[correo@dominio.cl]]</a>.</p>
+      </section>
+
+      <section id="cookies" class="card">
+        <h2>10. Cookies y tecnologías similares</h2>
+        <p>Utilizamos cookies para mejorar la experiencia. Puedes gestionar tus preferencias en el banner de cookies o en la configuración de tu navegador. Consulta la <a class="link" href="[[URL de la Política de Cookies]]">Política de Cookies</a>.</p>
+      </section>
+
+      <section id="terceros" class="card">
+        <h2>11. Enlaces y servicios de terceros</h2>
+        <p>El Servicio puede contener enlaces a sitios de terceros. No controlamos ni somos responsables por su contenido o políticas.</p>
+      </section>
+
+      <section id="garantias" class="card">
+        <h2>12. Exención de garantías</h2>
+        <p>El Servicio se proporciona <em>“tal cual”</em> y <em>“según disponibilidad”</em>, sin garantías de disponibilidad, precisión o adecuación a un propósito particular, en la máxima medida permitida por la ley.</p>
+      </section>
+
+      <section id="responsabilidad" class="card">
+        <h2>13. Limitación de responsabilidad</h2>
+        <p>En la medida permitida por la ley, [[Titular]] no será responsable por daños indirectos, incidentales, especiales o consecuentes derivados del uso o la imposibilidad de uso del Servicio.</p>
+      </section>
+
+      <section id="indemnizacion" class="card">
+        <h2>14. Indemnización</h2>
+        <p>Te comprometes a mantener indemne a [[Titular]] frente a reclamaciones de terceros derivadas de tu uso del Servicio en infracción de estos Términos.</p>
+      </section>
+
+      <section id="terminacion" class="card">
+        <h2>15. Terminación</h2>
+        <p>Podemos suspender o dar por terminado tu acceso si incumples estos Términos. Puedes dejar de usar el Servicio en cualquier momento y solicitar la eliminación de tu cuenta.</p>
+      </section>
+
+      <section id="cambios" class="card">
+        <h2>16. Cambios a los Términos</h2>
+        <p>Podemos actualizar estos Términos. Publicaremos la versión vigente con la fecha de “Última actualización”. Los cambios sustanciales serán notificados por medios razonables.</p>
+      </section>
+
+      <section id="ley" class="card">
+        <h2>17. Ley aplicable y jurisdicción</h2>
+        <p>Estos Términos se rigen por las leyes de la <strong>República de Chile</strong>. Para todos los efectos, las partes fijan domicilio en [[Ciudad/Comuna, Chile]] y se someten a la jurisdicción de sus tribunales ordinarios de justicia.</p>
+      </section>
+
+      <section id="contacto" class="card">
+        <h2>18. Contacto</h2>
+        <p>Si tienes preguntas, contáctanos en: <a class="link" href="mailto:[[correo@dominio.cl]]">[[correo@dominio.cl]]</a> o en [[dirección física si aplica]].</p>
+      </section>
+    </main>
+
+    <footer>
+      © [[Año actual]] [[Titular / Nombre comercial]]. Todos los derechos reservados.
+    </footer>
+  </div>
+</body>
+</html>
